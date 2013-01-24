@@ -11,6 +11,19 @@ function tw_slug_classes() {
     return trim($classes);
 }
 
+function tw_get_post($id, $item=null) {
+    $post = get_post($id);
+
+    if (!is_null($item)) {
+        $content = $post->$item;
+        $content = apply_filters('the_content', $content);
+        $content = str_replace(']]>', ']]&gt;', $content);
+        return $content;
+    }
+
+    return $post;
+}
+
 
 /*---------------------------------------------------------
  | Hook Section

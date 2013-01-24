@@ -28,6 +28,7 @@
     <meta name="viewport" content="width=device-width">
      
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" />
           
     <?php wp_head(); ?>
      
@@ -35,11 +36,13 @@
     <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'your-theme' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+    
     <!--
     <script src="js/libs/modernizr-2.5.3.min.js"></script>
     -->
 </head>
-<body>
+<body class="<?php echo tw_slug_classes(); ?>">
     <img class="bg" />
     <!--
     <header>
@@ -54,4 +57,4 @@
     </header>
     -->
 
-    <div role="main" class="hfeed <?php echo tw_slug_classes(); ?>">
+    <div role="main" class="hfeed">
