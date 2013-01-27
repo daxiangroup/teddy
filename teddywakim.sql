@@ -19,9 +19,10 @@
 -- Current Database: `teddywakim`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `teddywakim` /*!40100 DEFAULT CHARACTER SET latin1 */;
+-- CREATE DATABASE /*!32312 IF NOT EXISTS*/ `teddywakim` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `teddywakim`;
+-- USE `teddywakim`;
+USE `darby`;
 
 --
 -- Table structure for table `wp_commentmeta`
