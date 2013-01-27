@@ -37,24 +37,18 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
-    
-    <!--
-    <script src="js/libs/modernizr-2.5.3.min.js"></script>
-    -->
 </head>
 <body class="<?php echo tw_slug_classes(); ?>">
-    <img class="bg" />
-    <!--
+    <div id="bg-page">
+        <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo $post->post_name; ?>.png" />
+    </div>
     <header>
-        <div id="branding">
-            <div id="blog-title"><span><a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></span></div>
+        <div id="blog-title"><span><a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></span></div>
 <?php if ( is_home() || is_front_page() ) { ?>
-            <h1 id="blog-description"><?php bloginfo( 'description' ) ?></h1>
+        <h1 id="blog-description"><?php bloginfo( 'description' ) ?></h1>
 <?php } else { ?> 
-            <div id="blog-description"><?php bloginfo( 'description' ) ?></div>
+        <div id="blog-description"><?php bloginfo( 'description' ) ?></div>
 <?php } ?>
-        </div>
     </header>
-    -->
 
     <div role="main" class="hfeed">
