@@ -4,6 +4,7 @@
     define('SPACER', '&nbsp;&nbsp;&nbsp;');
     define('PAD',    20);
     define('BR',     '<br>');
+    define('THANK_YOU_PAGE', '/contact/thanks');
 
     if (!wp_verify_nonce($_POST['_wpnonce'], 'tw_contact')) {
         wp_redirect(site_url($failed.'?se=1'.$failed_extra)); 
@@ -32,5 +33,5 @@
     add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));    
     $mail_sent = wp_mail('ts@daxiangroup.com', 'Website Contact: '.$_POST['con-subject'], $body, $headers);
     
-    //header('Location: '.THANK_YOU_PAGE);
+    header('Location: '.THANK_YOU_PAGE);
     die();
