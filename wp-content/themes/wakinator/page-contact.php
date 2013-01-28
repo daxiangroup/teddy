@@ -18,7 +18,7 @@
             <?php } ?>
 
             <form id="frm-contact" action="<?php echo get_bloginfo('url'); ?>/submit/contact.php" method="post">
-            <?php wp_nonce_field('contact'); ?>
+            <?php wp_nonce_field('tw_contact'); ?>
             <div id="cntr-contact-form">
                 <div class="field">
                     <label for="con-fullname">Full Name<span class="req">*</span></label>

@@ -1,7 +1,7 @@
     </div><!-- #main -->
      
     <footer>
-        <?php wp_page_menu( 'sort_column=menu_order' ); ?>
+        <?php wp_nav_menu( array( 'theme_location' => 'main-navigation') ); ?>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
