@@ -25,10 +25,11 @@
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">     
+
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/css/bootstrap-responsive.min.css">
           
     <?php wp_head(); ?>
      
@@ -45,9 +46,9 @@
     <header>
         <div id="blog-title"><span><a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></span></div>
 <?php if ( is_home() || is_front_page() ) { ?>
-        <h1 id="blog-description"><?php bloginfo( 'description' ) ?></h1>
+        <h1 id="blog-description" class="hidden-phone"><?php bloginfo( 'description' ) ?></h1>
 <?php } else { ?> 
-        <div id="blog-description"><?php bloginfo( 'description' ) ?></div>
+        <div id="blog-description" class="hidden-phone"><?php bloginfo( 'description' ) ?></div>
 <?php } ?>
     </header>
 

@@ -76,6 +76,7 @@ footer {
     background: url(img/bg_box.png);
     border-top: solid 1px #000;
 }
+
     footer .menu-main-navigation-container {
         position: fixed;
         bottom: 27px;
@@ -99,6 +100,8 @@ footer {
                 footer .menu-main-navigation-container li.current-page-ancestor a {
                     color: #eee;
                 }
+
+.req { color: #c00; }
 
 div[role="main"] .content-container {
     padding: 15px;
@@ -160,3 +163,68 @@ div[role="main"] .content-container {
         height: 120px;
 
     }
+
+/*****[ Media Queries ]********************************************************/
+
+        #menu-control {
+            position: fixed;
+            right: 35px;
+            bottom: 0px;
+            height: 40px;
+            width: 65px;
+            z-index: 50;
+            color: #fff;
+            padding-top: 9px;
+            max-height: 31px;
+        }
+            #menu-control div {
+                margin-top: 5px;
+            }
+
+/* iPhone */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    header {
+        bottom: 10px;
+    }
+
+    footer {
+        height: 40px;
+    }
+
+    div[role="main"] div.content-container {
+        margin: 0 auto 60px auto !important;
+        width:80%;
+        left: 0px;
+        top: 0px;
+        right: none;
+    font-size: 0.8em !important;
+    word-spacing: 0px;
+    line-height: 1.2em;    }
+
+}
+
+/* iPhone 4 - Portrait */
+@media only screen and (max-device-width: 640px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    div[role="main"] div.content-container {
+        height: 325px;
+    }
+}
+
+/* iPhone 4 - landscape */
+@media only screen and (max-device-width: 960px) and (orientation: landscape) {
+    div[role="main"] div.content-container {
+        width: 85%;
+        height: 165px;
+    }
+}
+
+/* iPad - Portrait */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    header {
+        bottom: 10px;
+    }
+
+    footer {
+        height: 40px;
+    }
+}

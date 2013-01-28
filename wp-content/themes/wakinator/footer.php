@@ -1,7 +1,12 @@
     </div><!-- #main -->
      
     <footer>
-        <?php wp_nav_menu( array( 'theme_location' => 'main-navigation') ); ?>
+        <div class="hidden-phone hidden-tablet">
+            <?php wp_nav_menu( array( 'theme_location' => 'main-navigation') ); ?>
+        </div>
+        <div id="menu-control" class="toggle-up visible-phone visible-tablet">
+            Menu <div class="direction icon-arrow-up icon-white"></div>
+        </div>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
@@ -10,7 +15,7 @@
     <!-- scripts concatenated and minified via build script -->
     <!--
     <script src="js/plugins.js"></script>
-    <script src="js/script.js"></script>
     -->
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js"></script>
 </body>
 </html>
