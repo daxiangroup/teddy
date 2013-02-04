@@ -41,14 +41,16 @@
 </head>
 <body class="<?php echo tw_slug_classes(); ?>">
     <div id="bg-page">
-        <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo $post->post_name; ?>.png" />
+        <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo tw_bg_img($post, $page_type); ?>.png" />
     </div>
     <header>
+        <a href="http://www.torontocondos.com/" target="_blank">
+            <img id="brad-logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/brad_lamb_logo.jpg" />
+        </a>
         <div id="blog-title"><span><a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></span></div>
 <?php if ( is_home() || is_front_page() ) { ?>
-        <h1 id="blog-description" class="hidden-phone"><?php bloginfo( 'description' ) ?></h1>
-<?php } else { ?> 
-        <div id="blog-description" class="hidden-phone"><?php bloginfo( 'description' ) ?></div>
+        <h1 id="blog-description" class="hidden-phone">- <?php bloginfo( 'description' ) ?></h1><?php } else { ?>
+        <div id="blog-description" class="hidden-phone">- <?php bloginfo( 'description' ) ?></div>
 <?php } ?>
     </header>
 

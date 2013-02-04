@@ -42,13 +42,19 @@ html, html.no-js, body {
 header {
     position: fixed;
     left: 35px;
-    bottom: 27px;
+    bottom: 20px;
     width: 400px;
     z-index:10; 
 }
+    #brad-logo {
+        float: left;
+        height: 30px;
+        bottom: 10px;
+    }
+
     #blog-title {
         float: left;
-        margin-right: 10px;
+        margin: 4px 7px 0 15px;
     }
         #blog-title a {
             color: #eee;
@@ -63,8 +69,10 @@ header {
         font-size: 14px;
         font-weight: normal;
         margin: 0;
+        margin-top: 4px;
         line-height: 20px;
         color: #999;
+        display: none;
     }
 
 footer {
@@ -77,29 +85,43 @@ footer {
     border-top: solid 1px #000;
 }
 
-    footer .menu-main-navigation-container {
+    #menu-main-navigation {
         position: fixed;
-        bottom: 27px;
+        bottom: 16px;
         right: 20px;        
+        list-style: none;
     }
-        footer .menu-main-navigation-container ul {
-            list-style: none;
+        #menu-main-navigation li {
+            float: left;
+            margin-right: 15px;
         }
-
-            footer .menu-main-navigation-container li {
-                float: left;
-                margin-right: 15px;
+            #menu-main-navigation li a, #responsive-menu-main-navigation li a  {
+                color: #999;
+                text-decoration: none;
             }
-                footer .menu-main-navigation-container li a {
-                    color: #999;
-                    text-decoration: none;
-                }
+            #menu-main-navigation li a:hover,
+            #menu-main-navigation li.current_page_item a,
+            #menu-main-navigation li.current-page-ancestor a,
+            #menu-main-navigation li.current_page_parent a,
+            #responsive-menu-main-navigation li a:hover,
+            #responsive-menu-main-navigation li.current_page_item a,
+            #responsive-menu-main-navigation li.current-page-ancestor a,
+            #responsive-menu-main-navigation li.current_page_parent a {
+                color: #eee;
+            }
 
-                footer .menu-main-navigation-container li a:hover,
-                footer .menu-main-navigation-container li.current_page_item a,
-                footer .menu-main-navigation-container li.current-page-ancestor a {
-                    color: #eee;
-                }
+    #responsive-menu-main-navigation {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        position: relative;
+        list-style: none;
+        display: none;
+    }
+        #responsive-menu-main-navigation li {
+            float: left;
+        }
 
 .req { color: #c00; }
 
@@ -109,20 +131,22 @@ div[role="main"] .content-container {
     border: solid 1px #000;
     color: #999;
     position: fixed;
-    overflow: scroll;
-    
-    margin: 0 0 0 30px;
     width: 550px;
-    height: 177px;
+    height: auto;
+    overflow: scroll;
+    font-size: 0.93em;
+    line-height: 1.25em;
+    margin: 0 0 0 30px;
 }
     /*.selling .content-container       { margin: 0 0 0 30px; width: 550px; height: 152px; }*/
-    body.buying div.content-container        { margin: 0 30px 0 0; width: 550px; height: 400px; right: 0px; }
-    body.investing div.content-container     { margin: 30px 0 0 0; width: 550px; height: 185px; right: 0px; }
-    body.listings div.content-container      { margin: 30px 0 0 0; width: 550px; height: 300px; }
-    body.renting div.content-container       { margin: 0 30px; width: 550px; height: 329px; }
-    body.finance-tools div.content-container { margin: 0; width: 550px; height: 341px; right: 0px; }
-    body.contact div.content-container       { margin: 30px 0 0 0; width: 550px; height: 327px; }
-    body.thanks div.content-container        { margin: 0 0 0 30px; width: 550px; height: 117px; }
+    body.buying div.content-container        { margin: 0 30px 0 0; max-height: 412px; right: 0px; }
+    body.investing div.content-container     { margin: 30px 0 0 0; max-height: 150px; right: 0px; }
+    body.listings div.content-container      { margin: 30px 0 0 0; max-height: 380px; }
+    body.renting div.content-container       { margin: 0 30px; max-height: 260px; }
+    body.finance-tools div.content-container { margin: 0; max-height: 288px; right: 0px; }
+    body.blog div.content-container          { margin: 0 0 0 30px; max-height: 500px; }
+    body.contact div.content-container       { margin: 30px 0 0 0; height: 327px; }
+    body.thanks div.content-container        { margin: 0 0 0 30px; height: 117px; }
 
     .content-container p {
         margin: 0 0 12px 0;
@@ -145,6 +169,24 @@ div[role="main"] .content-container {
         color: #eee;
     }
 
+/*****[ Blog ]*****************************************************************/
+body.blog h4 {
+    margin-bottom: 2px;
+}
+    body.blog .navigation {
+        position: relative;
+        margin-bottom: 15px;
+        height: 20px;
+        font-size: .8em;
+        text-align: center;
+    }
+        body.blog .navigation .nav-previous {
+            margin-right: 2%;
+        }
+        body.blog .navigation .nav-next {
+            margin-left: 2%;
+        }
+        
 /*****[ Contact Form ]*********************************************************/
 #frm-contact {
     margin: 0;
@@ -166,65 +208,156 @@ div[role="main"] .content-container {
 
 /*****[ Media Queries ]********************************************************/
 
-        #menu-control {
-            position: fixed;
-            right: 35px;
-            bottom: 0px;
-            height: 40px;
-            width: 65px;
-            z-index: 50;
-            color: #fff;
-            padding-top: 9px;
-            max-height: 31px;
-        }
-            #menu-control div {
-                margin-top: 5px;
-            }
-
-/* iPhone */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    header {
-        bottom: 10px;
+#menu-control {
+    position: fixed;
+    right: 35px;
+    bottom: 0px;
+    height: 40px;
+    width: 65px;
+    z-index: 50;
+    color: #fff;
+    padding-top: 9px;
+    max-height: 31px;
+    cursor: pointer;
+}
+    #menu-control div {
+        margin-top: 5px;
     }
 
-    footer {
-        height: 40px;
-    }
+/* iPhone 4 - Portrait, iPhone4 - Landscape, iPad - Portrait, iPad - Landscape */
+@media only screen and (device-aspect-ratio : 2/3), /* iPhone - Safari - Portrait/Landscape */
+       only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : portrait), /* iPad - Safari - Portrait */
+       only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : landscape), /* iPad - Safari - Landscape */
+       screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: portrait), /* Chrome - iPhone - Portrait */
+       screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: landscape) /* Chrome - iPhone - Landscape */
+{
+    header { bottom: 10px; }
+    footer { height: 40px; }
 
+    div[role="main"] div.content-container li {
+        line-height: 1.3em;
+    }
+}
+
+/* iPhone 4 - Portrait, iPhone 4 - Landscape*/
+@media only screen and (device-aspect-ratio : 2/3), only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : portrait), only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : landscape) {
     div[role="main"] div.content-container {
-        margin: 0 auto 60px auto !important;
-        width:80%;
+        margin: 0 auto;
+        width: 80%;
         left: 0px;
-        top: 0px;
-        right: none;
-    font-size: 0.8em !important;
-    word-spacing: 0px;
-    line-height: 1.2em;    }
-
-}
-
-/* iPhone 4 - Portrait */
-@media only screen and (max-device-width: 640px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-    div[role="main"] div.content-container {
-        height: 325px;
+        right: 0px;
+        font-size: 0.8em;
+        word-spacing: 0px;
+        line-height: 1.2em;
     }
+
+    body.blog .navigation {
+        margin-top: 4px;
+        font-size: 1em;
+    }    
 }
 
-/* iPhone 4 - landscape */
-@media only screen and (max-device-width: 960px) and (orientation: landscape) {
+/* iPhone 4 - Safari - Portrait */
+@media only screen and (device-aspect-ratio : 2/3) and (orientation: portrait) {
+    div[role="main"] div.content-container {
+        height: 260px;
+    }
+
+    #responsive-menu-main-navigation {
+        top: 41px; 
+    }
+        #responsive-menu-main-navigation li {
+            width: 44%;
+            font-size: 1.25em;
+            line-height: 1.6em;
+        }
+}
+
+/* iPhone 4 - Safari - landscape */
+@media only screen and (device-aspect-ratio: 2/3) and (orientation: landscape) {
     div[role="main"] div.content-container {
         width: 85%;
-        height: 165px;
+        height: 120px;
+    }
+
+    #responsive-menu-main-navigation {
+        top: 41px; 
+    }
+        #responsive-menu-main-navigation li {
+            width: 50%;
+            font-size: 1.5em;
+            line-height: 1.6em;
+        }    
+}
+
+/* Chrome - iPhone - Portrait */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: portrait) {
+    div[role="main"] div.content-container {
+        width: 80%;
+        max-height: 320px;
+    }
+
+    #brad-logo {
+        margin-bottom: -6px;
+        margin-left: -20px;
+    }
+
+    #menu-control {
+        margin-right: -20px;
     }
 }
 
-/* iPad - Portrait */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-    header {
-        bottom: 10px;
+/* Chrome - iPhone - Landscape */
+@media screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: landscape) {
+    div[role="main"] div.content-container {
+        width: 85%;
+        max-height: 165px;
+    }    
+
+    #brad-logo {
+        margin-bottom: -6px;
+    }
+}
+
+/* iPad - Safari - Portrait */
+@media only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : portrait) {
+    div[role="main"] div.content-container {
+        width: 550px;
+        margin: 0;
+        top: 0px;
+        left: 30px;
+        height: auto;
+    }
+    #responsive-menu-main-navigation {
+        top: 41px; 
+    }
+        #responsive-menu-main-navigation li {
+            width: 50%;
+            font-size: 2em;
+            line-height: 1.2em;
+        }
+
+    #brad-logo {
+        margin-bottom: -5px;
+    }
+}
+
+/* iPad - Safari - Landscape */
+@media only screen and (device-width : 768px) and (device-height : 1024px) and (orientation : landscape) {
+    #menu-main-navigation { bottom: 0px; }
+    #blog-description { display: none; }    
+    div[role="main"] div.content-container {
+        margin: 0;
+        top: 0px;
+        left: 30px;
+        width: 550px;
+        font-size: 1em;
+    }
+    #responsive-menu-main-navigation {
+        display: none;
     }
 
-    footer {
-        height: 40px;
+    #brad-logo {
+        margin-bottom: -5px;
     }
 }

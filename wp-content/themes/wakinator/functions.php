@@ -1,5 +1,4 @@
 <?php
-
 function tw_register_menus() {
     register_nav_menus(array(
         'main-navigation' => __('Main Navigation'),
@@ -24,6 +23,26 @@ function tw_get_post($id, $item=null) {
     return $post;
 }
 
+function tw_bg_img($post, $page_type) {
+    switch (get_post_type($post->ID)) {
+        case 'post': return 'blog'; break;
+        case 'page': return $post->post_name; break;
+    }
+    
+    //die('page: <pre>'.$page_type.' : '.print_r($post,true));
+}
+
+function tw_post_navigation() {
+    echo '<span class="nav-previous">';
+    if (get_adjacent_post(true, '', true)) { echo previous_post_link('%link', 'Older'); }
+    else { echo 'Older'; }
+    echo '</span>';
+
+    echo '<span class="nav-next">';
+    if (get_adjacent_post(true, '', false)) { next_post_link('%link', 'Newer'); }
+    else { echo 'Newer'; }
+    echo '</span>';
+}
 
 /*---------------------------------------------------------
  | Hook Section
