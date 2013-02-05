@@ -43,7 +43,7 @@
     <div id="bg-page">
         <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo tw_bg_img($post, $page_type); ?>.jpg" />
     </div>
-    <header>
+    <div role="header">
         <a href="http://www.torontocondos.com/" target="_blank">
             <img id="brad-logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/brad_lamb_logo.jpg" />
         </a>
@@ -52,6 +52,6 @@
         <h1 id="blog-description" class="hidden-phone">- <?php bloginfo( 'description' ) ?></h1><?php } else { ?>
         <div id="blog-description" class="hidden-phone">- <?php bloginfo( 'description' ) ?></div>
 <?php } ?>
-    </header>
+    </div>
 
     <div role="main" class="hfeed">

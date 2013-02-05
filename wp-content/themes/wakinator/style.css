@@ -39,7 +39,7 @@ html, html.no-js, body {
         min-height:50%;
     }
 
-header {
+div[role="header"] {
     position: fixed;
     left: 35px;
     bottom: 20px;
@@ -65,7 +65,7 @@ header {
             color: #c00;
         }
 
-    header h1, #blog-description {
+    div[role="header"] h1, #blog-description {
         font-size: 14px;
         font-weight: normal;
         margin: 0;
@@ -75,7 +75,7 @@ header {
         display: none;
     }
 
-footer {
+div[role="footer"] {
     position: fixed;
     left: 0px;
     bottom: 0px;
@@ -231,8 +231,8 @@ body.blog h4 {
        screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: portrait), /* Chrome - iPhone - Portrait */
        screen and (-webkit-min-device-pixel-ratio: 1.3) and (orientation: landscape) /* Chrome - iPhone - Landscape */
 {
-    header { bottom: 10px; }
-    footer { height: 40px; }
+    div[role="header"] { bottom: 10px; }
+    div[role="footer"] { height: 40px; }
 
     div[role="main"] div.content-container li {
         line-height: 1.3em;

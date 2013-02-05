@@ -1,6 +1,6 @@
     </div><!-- #main -->
      
-    <footer>
+    <div role="footer">
         <div class="hidden-phone hidden-tablet">
             <?php wp_nav_menu(array(
                 'theme_location' => 'main-navigation',
@@ -14,7 +14,7 @@
             'container_class' => 'responsive-menu-main-navigation-container',
             'menu_id' => 'responsive-menu-main-navigation',
         )); ?>
-    </footer>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-1.9.0.min.js"><\/script>')</script>

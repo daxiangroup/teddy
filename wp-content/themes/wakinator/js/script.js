@@ -6,7 +6,7 @@ var ResponsiveWidget = {
         speed: 300,
         menuControl: $('#menu-control'),
         menuContainer: $('#responsive-menu-main-navigation'),
-        footer: $('footer'),
+        footer: $('div[role="footer"]'),
         contentContainer: $('.content-container'),
     },
 
