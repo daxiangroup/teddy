@@ -133,7 +133,7 @@ div[role="main"] .content-container {
     position: fixed;
     width: 550px;
     height: auto;
-    overflow: scroll;
+    overflow: auto;
     font-size: 0.93em;
     line-height: 1.25em;
     margin: 0 0 0 30px;

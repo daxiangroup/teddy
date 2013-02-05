@@ -41,7 +41,7 @@
 </head>
 <body class="<?php echo tw_slug_classes(); ?>">
     <div id="bg-page">
-        <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo tw_bg_img($post, $page_type); ?>.png" />
+        <img class="bg" src="<?php bloginfo('stylesheet_directory'); ?>/img/bg_<?php echo tw_bg_img($post, $page_type); ?>.jpg" />
     </div>
     <header>
         <a href="http://www.torontocondos.com/" target="_blank">
