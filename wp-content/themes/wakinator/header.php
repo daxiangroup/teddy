@@ -45,7 +45,7 @@
     </div>
     <div role="header">
         <a href="http://www.torontocondos.com/" target="_blank">
-            <img id="brad-logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/brad_lamb_logo.jpg" />
+            <img id="brad-logo" src="<?php bloginfo('stylesheet_directory'); ?>/img/brad_lamb_logo.jpg" width="75" height="30" />
         </a>
         <div id="blog-title"><span><a href="<?php bloginfo( 'url' ) ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></span></div>
 <?php if ( is_home() || is_front_page() ) { ?>

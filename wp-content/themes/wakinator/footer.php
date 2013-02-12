@@ -23,6 +23,6 @@
     <!--
     <script src="js/plugins.js"></script>
     -->
-    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js"></script>
+    <script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.min.js"></script>
 </body>
 </html>
