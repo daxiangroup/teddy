@@ -1,12 +1,5 @@
-<?php
-    //wp_enqueue_script('googlemaps', 'http://maps.google.com/maps/api/js?sensor=false&amp;language=en', 'jquery', false, true);
-    //wp_enqueue_script('gmap3', get_bloginfo('template_url').'/gmap3.min.js', 'googlemaps', false, true);
-
-    //wp_enqueue_script('gmap3', 'http://maps.google.com/maps/api/js?sensor=false&amp;language=en', 'jquery', false, true);
-?>
-
 <?php get_header(); the_post(); ?>
-         
+
         <div class="content-container">
             <h4><?php the_title(); ?></h4>
 
@@ -36,12 +29,12 @@
                     <label for="con-message">Message<span class="req">*</span></label>
                     <textarea name="con-message" id="con-message" class="required" data-label="Message" data-section="contact"></textarea>
                 </div>
-                <div class="field">
+                <div class="field controls">
                     <label></label>
-                    <button class="btn btn-primary">Send</button>
+                    <button id="btn-submit" class="btn btn-primary">Send</button>
                 </div>
             </div>
             </form>
         </div><!-- #content -->
-             
+
 <?php get_footer(); ?>

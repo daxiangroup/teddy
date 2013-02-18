@@ -60,6 +60,63 @@ var ResponsiveWidget = {
     }
 };
 
+var ContactFormWidget = {
+    settings: {
+        errors: [],
+        form: $('#frm-contact'),
+        submitButton: $('#btn-submit'),
+        container: $('#cntr-contact-form'),
+    },
+
+    init: function() {
+        obj = this.settings;
+        this.bindUIActions();
+    },
+
+    bindUIActions: function() {
+        if ($('#cntr-contact-form').length) {
+            obj.submitButton.on('click', function(event) {
+                event.preventDefault();
+                obj.errors.length = null;
+                ContactFormWidget.validate();
+                ContactFormWidget.submit();
+            });
+        }
+    },
+
+    validate: function() {
+        if ($('#con-fullname').val() == '') { obj.errors.push('Full Name must not be empty'); }
+        if ($('#con-email').val()    == '') { obj.errors.push('Email Address must not be empty'); }
+        if ($('#con-subject').val()  == '') { obj.errors.push('Subject must not be empty'); }
+        if ($('#con-message').val()  == '') { obj.errors.push('Message must not be empty'); }
+    },
+
+    submit: function() {
+        if (obj.errors.length) {
+            ContactFormWidget.showErrors();
+            return 0;
+        }
+
+        obj.form.submit();
+    },
+
+    showErrors: function() {
+        $('#cntr-error-messages').remove();
+        $('.content-container').scrollTop();
+
+        var string = '<div id="cntr-error-messages" class="alert alert-error"> \
+            There were some errors submitting your contact request: \
+            <ul>';
+        $.each(obj.errors, function(key, error) {
+            string += '<li>' + error + '</li>';
+        });
+        string += '</ul></div>';
+
+        obj.container.prepend(string);
+    }
+};
+
 $(document).ready(function() {
     ResponsiveWidget.init();
+    ContactFormWidget.init();
 });
