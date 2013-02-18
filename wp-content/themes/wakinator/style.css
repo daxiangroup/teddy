@@ -186,7 +186,7 @@ body.blog h4 {
         body.blog .navigation .nav-next {
             margin-left: 2%;
         }
-        
+
 /*****[ Contact Form ]*********************************************************/
 #frm-contact {
     margin: 0;
@@ -254,7 +254,7 @@ body.blog h4 {
     body.blog .navigation {
         margin-top: 4px;
         font-size: 1em;
-    }    
+    }
 }
 
 /* iPhone 4 - Safari - Portrait */
@@ -271,6 +271,19 @@ body.blog h4 {
             font-size: 1.25em;
             line-height: 1.6em;
         }
+
+    #cntr-contact-form label {
+        width: 150px;
+    }
+    #cntr-contact-form input[type="text"] {
+        width: 240px;
+    }
+    #cntr-contact-form textarea {
+        width: 240px;
+    }
+    #cntr-contact-form .controls label {
+        display: none;
+    }
 }
 
 /* iPhone 4 - Safari - landscape */
@@ -287,7 +300,17 @@ body.blog h4 {
             width: 50%;
             font-size: 1.5em;
             line-height: 1.6em;
-        }    
+        }
+
+    #cntr-contact-form label {
+        width: 150px;
+    }
+    #cntr-contact-form input[type="text"] {
+        width: 240px;
+    }
+    #cntr-contact-form textarea {
+        width: 240px;
+    }
 }
 
 /* Chrome - iPhone - Portrait */
