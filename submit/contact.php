@@ -20,7 +20,7 @@
 
     $body = '';
     $body .= '-----------------------------------------------------'.BR;
-    $body .= '| Website Contact Submission'.BR;
+    $body .= 'Website Contact Submission'.BR;
     $body .= '-----------------------------------------------------'.BR;
     $body .= BR;
     $body .= '<strong>Contact Details</strong>'.BR;
