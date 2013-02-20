@@ -10,3 +10,8 @@ RewriteRule . /teddy/index.php [L]
 </IfModule>
 
 # END WordPress
+
+SetEnv TW_ENV_DB_NAME teddywakim
+SetEnv TW_ENV_DB_USER teddywakim
+SetEnv TW_ENV_DB_PASSWORD Y0usuck!
+SetEnv TW_ENV_DB_HOST teddywakim.db.10514833.hostedresource.com
