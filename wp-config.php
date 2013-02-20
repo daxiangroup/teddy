@@ -25,7 +25,7 @@ define('DB_USER', (isset($_SERVER['TW_ENV_DB_USER']) ? $_SERVER['TW_ENV_DB_USER'
 define('DB_PASSWORD', (isset($_SERVER['TW_ENV_DB_PASSWORD']) ? $_SERVER['TW_ENV_DB_PASSWORD'] : $_ENV['TW_ENV_DB_PASSWORD']));
 
 /** MySQL hostname */
-define('DB_HOST', (isset($_SERVER['TW_ENV_DB_HOST']) ? $_SERVER['TW_ENV_DB_HOST']) : $_ENV['TW_ENV_DB_HOST']));
+define('DB_HOST', (isset($_SERVER['TW_ENV_DB_HOST']) ? $_SERVER['TW_ENV_DB_HOST'] : $_ENV['TW_ENV_DB_HOST']));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
