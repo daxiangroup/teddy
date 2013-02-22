@@ -13,8 +13,8 @@
  */
 define('WP_USE_THEMES', true);
 
-if (is_file('environment.inc.php'))
-    require_once('environment.inc.php');
+if (is_file('../environment.inc.php'))
+    require_once('../environment.inc.php');
 
 /** Loads the WordPress Environment and Template */
 require('./wp-blog-header.php');
