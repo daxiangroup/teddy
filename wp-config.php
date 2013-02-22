@@ -14,6 +14,9 @@
  * @package WordPress
  */
 
+if (is_file('../environment.inc.php'))
+    require_once('../environment.inc.php');
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', (isset($_SERVER['TW_ENV_DB_NAME']) ? $_SERVER['TW_ENV_DB_NAME'] : $_ENV['TW_ENV_DB_NAME']));
