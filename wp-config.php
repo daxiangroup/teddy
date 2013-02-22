@@ -14,8 +14,8 @@
  * @package WordPress
  */
 
-if (is_file('../environment.inc.php'))
-    require_once('../environment.inc.php');
+if (is_file(ABSPATH.'../environment.inc.php'))
+    require_once(ABSPATH.'../environment.inc.php');
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
