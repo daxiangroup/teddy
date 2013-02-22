@@ -1,4 +1,4 @@
 sitemap.xml
 wp-content/uploads/*
-wp-content/writable/.htaccess
-license.txt
+wp-content/writable/*
+.htaccess
