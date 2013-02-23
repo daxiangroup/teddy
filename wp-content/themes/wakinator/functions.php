@@ -26,7 +26,8 @@ function tw_get_post($id, $item=null) {
 function tw_bg_img($post, $page_type) {
     switch (get_post_type($post->ID)) {
         case 'post': return 'blog'; break;
-        case 'page': return $post->post_name; break;
+        case 'page':
+        default: return $post->post_name; break;
     }
     
     //die('page: <pre>'.$page_type.' : '.print_r($post,true));
