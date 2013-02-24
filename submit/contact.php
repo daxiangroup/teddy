@@ -31,7 +31,7 @@
     $body .= BR;
 
     add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));    
-    $mail_sent = wp_mail('ts@daxiangroup.com', 'Website Contact: '.$_POST['con-subject'], $body, $headers);
+    $mail_sent = wp_mail('ted@torontocondos.com', 'Website Contact: '.$_POST['con-subject'], $body, $headers);
     
     header('Location: '.THANK_YOU_PAGE);
     die();
