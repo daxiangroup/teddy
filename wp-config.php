@@ -45,14 +45,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('AUTH_KEY',         (isset($_SERVER['TW_ENV_AUTH_KEY']) ? $_SERVER['TW_ENV_AUTH_KEY'] : 'put your unique phrase here'));
+define('SECURE_AUTH_KEY',  (isset($_SERVER['TW_ENV_SECURE_AUTH_KEY']) ? $_SERVER['TW_ENV_SECURE_AUTH_KEY'] : 'put your unique phrase here'));
+define('LOGGED_IN_KEY',    (isset($_SERVER['TW_ENV_LOGGED_IN_KEY']) ? $_SERVER['TW_ENV_LOGGED_IN_KEY'] : 'put your unique phrase here'));
+define('NONCE_KEY',        (isset($_SERVER['TW_ENV_NONCE_KEY']) ? $_SERVER['TW_ENV_NONCE_KEY'] : 'put your unique phrase here'));
+define('AUTH_SALT',        (isset($_SERVER['TW_ENV_AUTH_SALT']) ? $_SERVER['TW_ENV_AUTH_SALT'] : 'put your unique phrase here'));
+define('SECURE_AUTH_SALT', (isset($_SERVER['TW_ENV_SECURE_AUTH_SALT']) ? $_SERVER['TW_ENV_SECURE_AUTH_SALT'] : 'put your unique phrase here'));
+define('LOGGED_IN_SALT',   (isset($_SERVER['TW_ENV_LOGGED_IN_SALT']) ? $_SERVER['TW_ENV_LOGGED_IN_SALT'] : 'put your unique phrase here'));
+define('NONCE_SALT',       (isset($_SERVER['TW_ENV_NONCE_SALT']) ? $_SERVER['TW_ENV_NONCE_SALT'] : 'put your unique phrase here'));
 
 /**#@-*/
 
