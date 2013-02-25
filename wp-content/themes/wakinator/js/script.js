@@ -22,6 +22,8 @@ var ResponsiveWidget = {
     },
 
     getDirection: function() {
+        obj = this.settings;
+
         if (obj.menuControl.hasClass('toggle-up')) {
             obj.menuControl.addClass('toggle-down');
             obj.menuControl.removeClass('toggle-up');
